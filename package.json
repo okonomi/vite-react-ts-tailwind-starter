@@ -7,14 +7,14 @@
     "dev": "vite",
     "test": "vitest run",
     "build": "tsc -b && vite build",
+    "preview": "vite preview",
     "lint": "run-p --continue-on-error lint:*",
     "lint:biome": "biome check",
     "lint:tsc": "tsc --build",
     "lint:prettier": "prettier --check src/",
     "lint-fix": "run-s lint-fix:*",
     "lint-fix:biome": "biome check --write --unsafe",
-    "lint-fix:prettier": "prettier --write src/",
-    "preview": "vite preview"
+    "lint-fix:prettier": "prettier --write src/"
   },
   "dependencies": {
     "react": "^19.0.0",
