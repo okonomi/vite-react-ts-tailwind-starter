@@ -6,9 +6,12 @@
   "scripts": {
     "dev": "vite",
     "build": "tsc -b && vite build",
+    "lint": "run-p --continue-on-error lint:*",
     "lint:biome": "biome check",
     "lint:prettier": "prettier --check src/",
+    "lint-fix": "run-s lint-fix:*",
     "lint-fix:biome": "biome check --write --unsafe",
+    "lint-fix:prettier": "prettier --write src/",
     "preview": "vite preview"
   },
   "dependencies": {
@@ -21,6 +24,7 @@
     "@types/react": "^19.0.10",
     "@types/react-dom": "^19.0.4",
     "@vitejs/plugin-react": "^4.3.4",
+    "npm-run-all2": "^7.0.2",
     "prettier": "3.5.3",
     "prettier-plugin-tailwindcss": "^0.6.11",
     "tailwindcss": "^4.1.3",
