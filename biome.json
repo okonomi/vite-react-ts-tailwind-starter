@@ -7,7 +7,13 @@
   },
   "files": {
     "ignoreUnknown": false,
-    "ignore": []
+    "ignore": [
+      ".vscode/*",
+      "dist",
+      "tsconfig.json",
+      "tsconfig.app.json",
+      "tsconfig.node.json"
+    ]
   },
   "formatter": {
     "enabled": true,
