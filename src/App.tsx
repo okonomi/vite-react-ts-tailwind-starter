@@ -1,3 +1,4 @@
+import { Minus, Plus, RotateCcw } from "lucide-react"
 import { useState } from "react"
 
 function App() {
@@ -11,22 +12,25 @@ function App() {
           <button
             type="button"
             onClick={() => setCount(count + 1)}
-            className="rounded bg-blue-500 px-3 py-1 text-white"
+            className="flex items-center rounded bg-blue-500 px-3 py-1 text-white"
           >
+            <Plus className="inline pe-1" size={16} />
             Increment
           </button>
           <button
             type="button"
             onClick={() => setCount(count - 1)}
-            className="rounded bg-red-500 px-3 py-1 text-white"
+            className="flex items-center rounded bg-red-500 px-3 py-1 text-white"
           >
+            <Minus className="inline pe-1" size={16} />
             Decrement
           </button>
           <button
             type="button"
             onClick={() => setCount(0)}
-            className="rounded bg-gray-500 px-3 py-1 text-white"
+            className="flex items-center rounded bg-gray-500 px-3 py-1 text-white"
           >
+            <RotateCcw className="inline pe-1" size={16} />
             Reset
           </button>
         </div>
