@@ -4,9 +4,12 @@
   "version": "0.0.0",
   "type": "module",
   "scripts": {
-    "dev": "vite",
+    "dev": "run-p dev:*",
+    "dev:vite": "vite",
+    "dev:storybook": "storybook dev -p 6006",
     "test": "vitest run",
     "build": "tsc -b && vite build",
+    "build:storybook": "storybook build",
     "preview": "vite preview",
     "lint": "run-p --continue-on-error lint:*",
     "lint:biome": "biome check",
@@ -14,9 +17,7 @@
     "lint:prettier": "prettier --check src/",
     "lint-fix": "run-s lint-fix:*",
     "lint-fix:biome": "biome check --write --unsafe",
-    "lint-fix:prettier": "prettier --write src/",
-    "storybook": "storybook dev -p 6006",
-    "build-storybook": "storybook build"
+    "lint-fix:prettier": "prettier --write src/"
   },
   "dependencies": {
     "clsx": "^2.1.1",
