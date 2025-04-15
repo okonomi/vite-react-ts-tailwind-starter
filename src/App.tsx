@@ -1,7 +1,7 @@
 import { Minus, Plus, RotateCcw } from "lucide-react"
 import { useState } from "react"
 
-function App() {
+export const App: React.FC = () => {
   const [count, setCount] = useState(0)
 
   return (
@@ -38,5 +38,3 @@ function App() {
     </div>
   )
 }
-
-export default App
