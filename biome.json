@@ -10,6 +10,7 @@
     "ignore": [
       ".vscode/*",
       "dist",
+      "storybook-static",
       "tsconfig.json",
       "tsconfig.app.json",
       "tsconfig.node.json"
