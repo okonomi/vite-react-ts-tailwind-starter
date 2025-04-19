@@ -3,5 +3,10 @@
   "editor.formatOnSave": true,
   "editor.codeActionsOnSave": {
     "source.organizeImports.biome": "explicit"
-  }
+  },
+  "github.copilot.chat.commitMessageGeneration.instructions": [
+    {
+      "file": ".copilot-commit-message-instructions.md"
+    }
+  ]
 }
