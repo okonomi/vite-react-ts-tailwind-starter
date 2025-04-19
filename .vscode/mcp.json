@@ -5,6 +5,11 @@
       "id": "github_token",
       "description": "GitHub Personal Access Token",
       "password": true
+    },
+    {
+      "type": "promptString",
+      "id": "repository_path",
+      "description": "Path to the Git repository"
     }
   ],
   "servers": {
@@ -21,6 +26,19 @@
       "env": {
         "GITHUB_PERSONAL_ACCESS_TOKEN": "${input:github_token}"
       }
+    },
+    "git": {
+      "command": "mise",
+      "args": [
+        "x",
+        "python",
+        "--",
+        "python",
+        "-m",
+        "mcp_server_git",
+        "--repository",
+        "${input:repository_path}"
+      ]
     }
   }
 }
