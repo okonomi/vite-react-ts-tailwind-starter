@@ -1,5 +1,6 @@
 import { Minus, Plus, RotateCcw } from "lucide-react"
 import { useState } from "react"
+import { Button } from "./components/Button"
 
 export const App: React.FC = () => {
   const [count, setCount] = useState(0)
@@ -9,30 +10,15 @@ export const App: React.FC = () => {
       <div className="p-6 text-center">
         <h1 className="mb-4 text-3xl font-bold">Count: {count}</h1>
         <div className="flex gap-2">
-          <button
-            type="button"
-            onClick={() => setCount(count + 1)}
-            className="flex items-center rounded bg-blue-500 px-3 py-1 text-white"
-          >
-            <Plus className="inline pe-1" size={16} />
-            Increment
-          </button>
-          <button
-            type="button"
-            onClick={() => setCount(count - 1)}
-            className="flex items-center rounded bg-red-500 px-3 py-1 text-white"
-          >
-            <Minus className="inline pe-1" size={16} />
-            Decrement
-          </button>
-          <button
-            type="button"
-            onClick={() => setCount(0)}
-            className="flex items-center rounded bg-gray-500 px-3 py-1 text-white"
-          >
-            <RotateCcw className="inline pe-1" size={16} />
-            Reset
-          </button>
+          <Button color="blue" onClick={() => setCount(count + 1)}>
+            <Plus className="inline pe-1" size={16} /> Increment
+          </Button>
+          <Button color="red" onClick={() => setCount(count - 1)}>
+            <Minus className="inline pe-1" size={16} /> Decrement
+          </Button>
+          <Button color="gray" onClick={() => setCount(0)}>
+            <RotateCcw className="inline pe-1" size={16} /> Reset
+          </Button>
         </div>
       </div>
     </div>
